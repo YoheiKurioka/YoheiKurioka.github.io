@@ -58,8 +58,13 @@
         </div>
 
         <div class="section">
-          <div class="slide slide04">
+          <div class="slide slide04 slide04-1">
             <h2>HOBBY</h2>
+            かなりのゲーマー<br>
+            よく遊んでるタイトルは以下<br>
+            FPS: Apex, Valorant, EscapeFromTarkov<br>
+            遊戯王マスターデュエル<br>
+            モンスターハンターシリーズ
           </div>
         </div>
 
@@ -95,11 +100,14 @@
 
         const img = ['b1.jpg', 'b2.jpg'];
         const pimg = ['js.png', 'HTML_CSS.png','go.jpg','Csharp.jpg','C.png'];
+        const gimg = ['duel.jpg', 'apex.jpg', 'valo.jpg', 'mhr.jpg', 'eft.jpg']
         let count = -1;
         let pcount = -1;
+        let gcount = -1;
 
         picBGChange();
         picPGChange();
+        picGGChange();
 
         function picBGChange() {
             count++;
@@ -121,6 +129,17 @@
                }); 
             });
             setTimeout("picPGChange()", 3000);    
+        }
+
+        function picGGChange() {
+            gcount++;
+            if(gcount == gimg.length) gcount = 0;
+            $(function() {
+               $('.slide04-1').css({
+                backgroundImage: 'url(' + gimg[gcount] + ')'
+               }); 
+            });
+            setTimeout("picGGChange()", 3000);    
         }
     </script>
 

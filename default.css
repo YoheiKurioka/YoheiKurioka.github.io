@@ -1,7 +1,12 @@
-a{
-    background: #c2edff;
+#menu a{
+    background: #f1f5f7;
     padding: 0.1em;
     max-width: fit-content;
+}
+
+.slide01 p{
+    color: whitesmoke;
+    text-shadow: 1px 1px;
 }
 
 p{

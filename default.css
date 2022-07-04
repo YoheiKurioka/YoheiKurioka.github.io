@@ -1,0 +1,26 @@
+a{
+    background: #c2edff;
+    padding: 0.1em;
+    max-width: fit-content;
+}
+
+.slide01{
+    /* background-image: url(./b1.jpg); */
+    background-position: center center;
+    background-size: cover;
+}
+
+div.slide01.p{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+}
+
+.slide02{
+    background-image: url(./mafia.jpg);
+    background-position: center center;
+}

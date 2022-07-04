@@ -2,7 +2,102 @@
   <head>
     <meta charset='utf-8'>
     <title>マロンの自己紹介サイト</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.css">
+    <link rel="stylesheet" href="./default.css">
   </head>
   <body>
+    <div id="fullpage">
+
+        <div class="section">
+            <div class="slide slide01">
+                <!-- <h1><a href="#home">HOME</a></h1>
+                <h1><a href="#about">ABOUT ME</a></h1>
+                <h1><a href="#skill">SKILL</a></h1>
+                <h1><a href="#hobby">HOBBY</a></h1>
+                <h1><a href="#social">SOCIAL</a></h1> -->
+                <p>マロンの自己紹介サイト</p>
+                <ul id="menu">
+                    <li data-menuanchor="home" class="active"><a href="#home">HOME</a></li>
+                    <li data-menuanchor="about"><a href="#about">ABOUT ME</a></li>
+                    <li data-menuanchor="skill"><a href="#skill">SKILL</a></li>
+                    <li data-menuanchor="hobby"><a href="#hobby">HOBBY</a></li>
+                    <li data-menuanchor="social"><a href="#social">SOCIAL</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="slide slide02">
+                <h2>ABOUT ME</h2>
+                名前 栗岡陽平<br>
+                出身 兵庫県尼崎市<br>
+                学年 修士2年<br>
+                学部 理工学部<br>
+                学科 情報学科<br>
+                研究科 総合理工学研究科<br>
+                専攻 エレクトロニクス系工学専攻<br>
+                趣味 ゲーム・カラオケ
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="slide slide03">
+                <h2>SKILL</h2>
+            </div>
+        </div>
+
+        <div class="section">
+          <div class="slide slide04">
+            <h2>HOBBY</h2>
+          </div>
+        </div>
+
+        <div class="section">
+            <div class="slide slide05">
+                <h2>SOCIAL</h2>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- js読み込み -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/vendors/scrolloverflow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.5/jquery.fullpage.js"></script>
+    
+    <!-- fullpagejsの設定s -->
+    <script>
+        jQuery(function () {
+            jQuery('#fullpage').fullpage({
+                scrollOverflow:true,
+                anchors: ['home', 'about', 'skill', 'hobby', 'social'],
+                menu: 'menu',
+                navigation: true,
+                controlArrows: false,
+                slideNavigation: true,
+            });
+        });
+    </script>
+
+    <script>
+        'use strict';
+
+        const img = ['b1.jpg', 'b2.jpg'];
+        let count = -1;
+
+        picChange();
+
+        function picChange() {
+            count++;
+            if(count == img.length) count = 0;
+            $(function() {
+               $('.slide01').css({
+                backgroundImage: 'url(' + img[count] + ')'
+               }); 
+            });
+            setTimeout("picChange()", 5000);    
+        }
+    </script>
+
   </body>
 </html>

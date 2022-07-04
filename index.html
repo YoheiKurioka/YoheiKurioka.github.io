@@ -43,12 +43,22 @@
         <div class="section">
             <div class="slide slide03 slide03-1">
                 <h2>Python</h2>
+                メインで使っている言語<br>
             </div>
             <div class="slide slide03 slide03-2">
                 <h2>Elixir</h2>
+                趣味で使ってる言語<br>
+                スクレイピングで使った程度
             </div>
             <div class="slide slide03 slide03-3">
                 <h2>Java</h2>
+                学校の授業で使ってた言語<br>
+                ServletやGradle使ったことある程度
+            </div>
+            <div class="slide slide03 slide03-4">
+                <h2>その他</h2>
+                一瞬触ったことある程度<br>
+                go,c#,c,html/css,javascript
             </div>
         </div>
 
@@ -89,11 +99,13 @@
         'use strict';
 
         const img = ['b1.jpg', 'b2.jpg'];
+        const pimg = ['js.png', 'HTML_CSS.png','go.jpg','Csharp.jpg','C.png'];
         let count = -1;
 
-        picChange();
+        picBGChange();
+        picPGChange();
 
-        function picChange() {
+        function picBGChange() {
             count++;
             if(count == img.length) count = 0;
             $(function() {
@@ -101,7 +113,18 @@
                 backgroundImage: 'url(' + img[count] + ')'
                }); 
             });
-            setTimeout("picChange()", 5000);    
+            setTimeout("picBGChange()", 5000);    
+        }
+
+        function picPGChange() {
+            count++;
+            if(count == pimg.length) count = 0;
+            $(function() {
+               $('.slide03-4').css({
+                backgroundImage: 'url(' + pimg[count] + ')'
+               }); 
+            });
+            setTimeout("picPGChange()", 3000);    
         }
     </script>
 

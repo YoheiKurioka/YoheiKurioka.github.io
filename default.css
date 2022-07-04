@@ -48,5 +48,30 @@ p:before, p:after {
 .slide03-1{
     background-image: url(./python.jpg);
     background-position: center center;
-    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide03-2{
+    background-image: url(./elixir.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide03-3{
+    background-image: url(./java.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide03-4{
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
 }

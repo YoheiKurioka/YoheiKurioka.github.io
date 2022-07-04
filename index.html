@@ -10,11 +10,6 @@
 
         <div class="section">
             <div class="slide slide01">
-                <!-- <h1><a href="#home">HOME</a></h1>
-                <h1><a href="#about">ABOUT ME</a></h1>
-                <h1><a href="#skill">SKILL</a></h1>
-                <h1><a href="#hobby">HOBBY</a></h1>
-                <h1><a href="#social">SOCIAL</a></h1> -->
                 <p>マロンの自己紹介サイト</p>
                 <ul id="menu">
                     <li data-menuanchor="home" class="active"><a href="#home">HOME</a></li>
@@ -101,6 +96,7 @@
         const img = ['b1.jpg', 'b2.jpg'];
         const pimg = ['js.png', 'HTML_CSS.png','go.jpg','Csharp.jpg','C.png'];
         let count = -1;
+        let pcount = -1;
 
         picBGChange();
         picPGChange();
@@ -117,11 +113,11 @@
         }
 
         function picPGChange() {
-            count++;
-            if(count == pimg.length) count = 0;
+            pcount++;
+            if(pcount == pimg.length) pcount = 0;
             $(function() {
                $('.slide03-4').css({
-                backgroundImage: 'url(' + pimg[count] + ')'
+                backgroundImage: 'url(' + pimg[pcount] + ')'
                }); 
             });
             setTimeout("picPGChange()", 3000);    
